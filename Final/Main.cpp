@@ -71,7 +71,23 @@ int main() {
 			std::cout << i + 1 << ". " << arr3[i] << '\n';
 	}
 	std::cout << std::endl;*/
-		
-		
-		return 0;
+		//Задача 4. Самостоятельная. П выводит каждый элемент массива который больше чем элемент стоящий перед ним
+	std::cout << "Задача 4. \nИзначальный массив:\n";
+	const int size4 = 6;
+	int arr4[size4];
+	int counter = 0;
+	srand(time(NULL));
+	for (int i = 0; i < size4; i++) {
+		arr4[i] = rand() % (20 - 10) + 10;
+		std::cout << arr4[i] << " ";
+	}
+	
+	for (int i = 0; i < size4; i++) {
+		if (arr4[i] > i-1)
+			counter++;
+		std::cout << "Элементы большие чем предыдущие: " << counter << '\n';
+		}
+	
+	
+	return 0;
 }
